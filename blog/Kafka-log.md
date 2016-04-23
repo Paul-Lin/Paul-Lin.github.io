@@ -3,11 +3,11 @@
 > sh bin/kafka-server-start.sh config/server.properties &
 
 ### Step2:Create topic
-> sh bin/kafka-topics.sh --create --zookeeper localhost:2181 \
---replication-factor 1 --topics test
+> sh bin/kafka-topics.sh  --zookeeper localhost:2181 \
+--replication-factor 1 --partitions 2 --create --topic test
 
 #### Step2.1:Check topic by list command
-> sh bin/kakfa-topics.sh --list --zookeeper localhost:2181 test
+> sh bin/kafka-topics.sh  --zookeeper localhost:2181 --list 
 
 ### Step3:Sent Message
 > sh bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
