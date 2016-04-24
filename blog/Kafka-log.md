@@ -13,8 +13,8 @@
 > sh bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
 
 ### Step4:Start Consumer
-> sh bin/kafka-console-consumer.sh --zookeeper locahost:2181 --topic test \
---form-begining
+> sh bin/kafka-console-consumer.sh --zookeeper locahost:2181  \
+--from-beginning --topic test
 
 ***
 ## How to develop in Kafka 
